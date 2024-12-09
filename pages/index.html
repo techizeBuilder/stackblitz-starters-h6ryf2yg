@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Registration</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Registration</h1>
+      
+      <form id="userForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="Enter username (min. 3 characters)"
+            required
+          />
+          <div id="usernameError" class="error">
+            Username must be at least 3 characters long
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Enter your email"
+            required
+          />
+          <div id="emailError" class="error">
+            Please enter a valid email address
+          </div>
+        </div>
+
+        <button type="submit" id="submitButton">Register User</button>
+      </form>
+
+      <div id="successMessage" class="success-message"></div>
+      <div id="errorMessage" class="error-message"></div>
+
+      <div class="users-list">
+        <h2>Registered Users</h2>
+        <div id="usersList">
+          <p class="empty-message">No users registered yet.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
